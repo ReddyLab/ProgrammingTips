@@ -57,6 +57,6 @@ That said, sometimes non-descriptive names are okay. Loop counters, for instance
 
 Automate early and often
 
-https://death.andgravity.com/aosa
+https://death.andgravity.com/aosa has some interesting resources for learning about how to structure larger programs.
 
 Try to separate reading and writing data from doing work on data. Ideally read data from a file in one function, returning some data structure. Operate on that data in one or more functions, which all return their results. Write out those results, as needed, in other functions.
