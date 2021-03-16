@@ -47,12 +47,16 @@ For reproducibility reasons it's important that the version of any software you 
 - pip freeze will output installed packages, along with their version numbers, in a way formatted for use with pip.  This works best in conjunction with an environment manager.
 - conda list will output all installed packages installed using conda.
 
+## Naming variables
+
+There's a joke in the programming community that "There are only two hard problems in computer science: cache invalidation and naming things." Generally, it's a good idea to name things by what they __do__ i.e., their purpose, not by what they are.
+
+That said, sometimes non-descriptive names are okay. Loop counters, for instance, are often named `i` or `j`. This is a known convention and is fine.
+
 ## Misc
 
 Automate early and often
 
 https://death.andgravity.com/aosa
-
-Name things by what they do, their purpose, not by what they are.
 
 Try to separate reading and writing data from doing work on data. Ideally read data from a file in one function, returning some data structure. Operate on that data in one or more functions, which all return their results. Write out those results, as needed, in other functions.
