@@ -1,4 +1,7 @@
 # Programming Tips
+
+Please note that these tips are meant to be guidelines, not laws. Additionally, they reflect the author's own biases. Suggestions and discussion are/is encouraged.
+
 ## High Level
 
 Much of the programming  we do falls into the realm of "batch processing" -- these are programs that are run with a set of data and result in a set of other data. Mathematically they are essentially functions. Often the programs can be broken down into sub-programs which may be further broken down, etc. We can think of the structure like a Directed-Acyclic Graph (DAG) with each vertex being a sub- (or sub-sub- etc.) program and each edge indicating a flow of data out of one sub-program into another.
