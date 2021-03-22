@@ -34,7 +34,13 @@ If you use a random number generator, make sure you have a way to seed it so pro
 
 ## Source Control
 
-Source control is The Reddy lab (and many other labs, probably) use GitHub, and this git for source control. You probably want one repository per projects
+Source control is very important so you don't lose work. Additionally, if your programming is "exploratory" it makes it easy to backtrack if you go down a dead-end. The Reddy lab (and many other labs, probably) use GitHub, and thus [`git`](https://git-scm.com), for source control.
+
+You probably want one `git` repository per project (there is an alternative to this called a "mono repo" that puts all projects in a single repository, but that's probably not a good fit).
+
+While programming it's a good idea to commit your changes to `git` somewhat often, at least once a day. Good practice is for each commit to be a set of changes for a single purpose. This purpose could be adding a new feature, removing some code, or cleaning up formatting.
+
+When working on your own you can use whatever source control workflow you like, but once you start collaborating on software with other people you'll want to come up with a way of collaborating together. [GitHub](https://github.com) has [a guide](https://guides.github.com/introduction/flow/) explaining the "GitHub Flow" for collaboration.
 
 ## Environment management
 
