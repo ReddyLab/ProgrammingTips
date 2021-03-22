@@ -60,3 +60,8 @@ Automate early and often
 https://death.andgravity.com/aosa has some interesting resources for learning about how to structure larger programs.
 
 Try to separate reading and writing data from doing work on data. Ideally read data from a file in one function, returning some data structure. Operate on that data in one or more functions, which all return their results. Write out those results, as needed, in other functions.
+
+Don't worry about supporting Python 2, unless you have a very good reason. It's no longer supported by the Python Software Foundation and library authors have had over a decade to transition to python 3.
+Python release and support schedules:<br/>
+[Python 2](https://www.python.org/dev/peps/pep-0373/)<br/>
+[Python 3](https://www.python.org/dev/peps/pep-0602/)
