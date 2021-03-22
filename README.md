@@ -19,7 +19,7 @@ Pure functions have several benefits.
 
 There are a several way so isolate or factor out the impure portions of functions. Here a few (not an exhaustive list):
 - read the input values from a file, pass the values to the pure function, then write the function output to another file
-- [Python] IO objects, like files, are "iterable" -- they can be iterated over in a `for` loop. So pass the file object to the pure function and just use the "iterable" functionality. When testing create a test object that is also iterable. The test object can be passed in to the pure function just like the file. This is a specific case of:
+- [Python only] IO objects, like files, are "iterable" -- they can be iterated over in a `for` loop. So pass the file object to the pure function and just use the "iterable" functionality. When testing create a test object that is also iterable. The test object can be passed in to the pure function just like the file. This is a specific case of:
 - Wrap the impure thing in an "interface"[2] that can also be implemented by pure things and pass the wrapper in to the function. From within the pure function only use the interface for interacting with the passed-in object.
 
 [0]  A side effect is a change to the environment outside the function itself. Common examples are print to the console[1], file input/out, and setting global variables.<br/>
@@ -59,15 +59,21 @@ There's a joke in the programming community that "There are only two hard proble
 
 That said, sometimes non-descriptive names are okay. Loop counters, for instance, are often named `i` or `j`. This is a known convention and is fine.
 
-## Misc
-
-Automate early and often
+## Python Tips
 
 https://death.andgravity.com/aosa has some interesting resources for learning about how to structure larger programs.
-
-Try to separate reading and writing data from doing work on data. Ideally read data from a file in one function, returning some data structure. Operate on that data in one or more functions, which all return their results. Write out those results, as needed, in other functions.
 
 Don't worry about supporting Python 2, unless you have a very good reason. It's no longer supported by the Python Software Foundation and library authors have had over a decade to transition to python 3.
 Python release and support schedules:<br/>
 [Python 2](https://www.python.org/dev/peps/pep-0373/)<br/>
 [Python 3](https://www.python.org/dev/peps/pep-0602/)
+
+Use [`os.path.join`](https://docs.python.org/3/library/os.path.html#os.path.join) or [`pathlib`](https://docs.python.org/3/library/pathlib.html) to join directory and file names (instead of concatenating strings).
+
+When creating a string, use [f-Strings](https://realpython.com/python-f-strings/).
+
+## Misc
+
+Automate early and often
+
+Try to separate reading and writing data from doing work on data. Ideally read data from a file in one function, returning some data structure. Operate on that data in one or more functions, which all return their results. Write out those results, as needed, in other functions.
