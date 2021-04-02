@@ -72,8 +72,12 @@ Use [`os.path.join`](https://docs.python.org/3/library/os.path.html#os.path.join
 
 When creating a string, use [f-Strings](https://realpython.com/python-f-strings/).
 
+[icecream](https://github.com/gruns/icecream) looks like a helpful improvement for debug printfs
+
 ## Misc
 
 Automate early and often
 
 Try to separate reading and writing data from doing work on data. Ideally read data from a file in one function, returning some data structure. Operate on that data in one or more functions, which all return their results. Write out those results, as needed, in other functions.
+
+[UP](https://github.com/akavel/up) looks like a helpful utility for building those `awk`/`sed`/`tr`/`grep` pipelines
