@@ -74,6 +74,8 @@ When creating a string, use [f-Strings](https://realpython.com/python-f-strings/
 
 [icecream](https://github.com/gruns/icecream) looks like a helpful improvement for debug printfs
 
+[ipython](https://ipython.readthedocs.io/en/stable/) Is a much improved python shell. If you use python interactively on the command line, you should install and use this.
+
 ## Misc
 
 Automate early and often
