@@ -73,6 +73,10 @@ Using a new language means there are even more ways to speed up code.
 * [Go](https://golang.org)
 * [Rust](https://rust-lang.org/) (integrate with python using [PyO3](https://pyo3.rs/) and [maturin](https://maturin.rs))
   * I did this for data filtering in the portal
+* [Nim](https://nim-lang.org)
+* [Java](https://www.java.com/en/)
+* [C#](https://learn.microsoft.com/en-us/dotnet/csharp/)
+  * Or any other [.Net language](https://learn.microsoft.com/en-us/dotnet/)
 * C/C++ (https://docs.python.org/3/extending/index.html#extending-index, https://docs.python.org/3/c-api/index.html)
 
 ## More Resources
