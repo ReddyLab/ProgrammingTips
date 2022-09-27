@@ -22,7 +22,7 @@ There are a several way so isolate or factor out the impure portions of function
 - [Python only] IO objects, like files, are "iterable" -- they can be iterated over in a `for` loop. So pass the file object to the pure function and just use the "iterable" functionality. When testing create a test object that is also iterable. The test object can be passed in to the pure function just like the file. This is a specific case of:
 - Wrap the impure thing in an "interface"[2] that can also be implemented by pure things and pass the wrapper in to the function. From within the pure function only use the interface for interacting with the passed-in object.
 
-[0]  A side effect is a change to the environment outside the function itself. Common examples are print to the console[1], file input/out, and setting global variables.<br/>
+[0] A side effect is a change to the environment outside the function itself. Common examples are print to the console[1], file input/out, and setting global variables.<br/>
 [1] Printing to the console is generally harmless<br/>
 [2] An interface is a set of methods an object<br/>
 
@@ -34,7 +34,7 @@ If you use a random number generator, make sure you have a way to seed it so pro
 
 ## Source Control
 
-Source control is very important so you don't lose work. Additionally, if your programming is "exploratory" it makes it easy to backtrack if you go down a dead-end. The Reddy lab (and many other labs, probably) use GitHub, and thus [`git`](https://git-scm.com), for source control.
+It's very important to use source control for a several reasons. If you keep your changes off-site it can help you avoid the loss of your work in case of disaster. It's an extension of your lab notebook, documenting not just what, but why changes were made. Additionally, if your programming is "exploratory" it makes it easy to backtrack if you go down a dead-end. The Reddy lab (and many other labs) use GitHub, and thus [`git`](https://git-scm.com), for source control.
 
 You probably want one `git` repository per project (there is an alternative to this called a "mono repo" that puts all projects in a single repository, but that's probably not a good fit).
 
@@ -83,3 +83,32 @@ Automate early and often
 Try to separate reading and writing data from doing work on data. Ideally read data from a file in one function, returning some data structure. Operate on that data in one or more functions, which all return their results. Write out those results, as needed, in other functions.
 
 [UP](https://github.com/akavel/up) looks like a helpful utility for building those `awk`/`sed`/`tr`/`grep` pipelines
+
+Avoid using "magic" values, especially numbers. These are literal values ("3") that have some semantic meaning but are in the code with no context. Instead, these should be made constants. i.e.,
+
+### BAD
+```python
+x = 2 * 3.14159 * r
+
+```
+
+### BETTER
+```python
+PI = 3.14159
+
+x = 2 * PI * r
+```
+
+### BEST
+```python
+PI = 3.14159
+
+def circumference(r):
+    return 2 * PI * r
+
+x = circumference(r)
+
+```
+
+
+
