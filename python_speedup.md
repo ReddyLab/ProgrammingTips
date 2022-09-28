@@ -56,8 +56,8 @@ These different ways of performing multiple tasks at once each have their place.
 PyPy won't always be a win, it depends a lot on the situation. See https://www.pypy.org/features.html for more information about appropriate use cases. It also only supports python up through 3.7.
 
 ## Compile Python
-* [Cython](https://cython.org) Compiles python, or a python-like language to C, then to machine code
-    
+* [Cython](https://cython.org) Compiles python, or a very python-like language, to a C module
+* [mypyc](https://github.com/mypyc/mypyc) Compiles type-annotated python to a C module
 * [Numba](https://numba.pydata.org) JIT python to machine code
 * [Taichi](https://www.taichi-lang.org) JIT python to machine code
 
