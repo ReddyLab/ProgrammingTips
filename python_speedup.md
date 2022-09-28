@@ -5,6 +5,10 @@ First -- profile for speed! Figure out where your code is slow/taking a lot of t
 * [profile](https://docs.python.org/3/library/profile.html)
 * [pyinstrument](https://github.com/joerick/pyinstrument/)
 
+* [SnakeViz](https://jiffyclub.github.io/snakeviz/) Is useful for reading `profile` results
+
+https://stackoverflow.com/questions/4544784/how-can-you-get-the-call-tree-with-python-profilers lists some more profiling tools, including pyinstrument.
+
 Profile memory usage too. We in CS used to talk about tradeoffs between space (memory) and time in CS. You could reduce time by using more space, and visa versa. In modern computer architectures this is often no longer true and improving (reducing) memory usage can also improve time.
 
 * Some information about profiling memory usage: https://pythonspeed.com/datascience/#measuring-memory-usage
