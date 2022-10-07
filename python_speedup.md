@@ -4,6 +4,7 @@ First -- profile for speed! Figure out where your code is slow/taking a lot of t
 
 * [profile](https://docs.python.org/3/library/profile.html)
 * [pyinstrument](https://github.com/joerick/pyinstrument/)
+* [scalene](https://github.com/plasma-umass/scalene) ["Python Performance Matters" by Emery Berger (Strange Loop 2022)](https://www.youtube.com/watch?v=vVUnCXKuNOg) mentions quite a few different profilers. It's by one of the Scalene developers, so is pretty heavily about Scalene.
 
 * [SnakeViz](https://jiffyclub.github.io/snakeviz/) Is useful for reading `profile` results
 
